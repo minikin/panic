@@ -1,16 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+import 'src/app.dart';
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Panic Demo',
-      theme: ThemeData(),
-      home: Container(),
-    );
-  }
+void main() {
+  runApp(App());
 }
