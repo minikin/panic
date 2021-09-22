@@ -1,7 +1,7 @@
+import 'package:example/src/app.dart';
 import 'package:http/http.dart';
 import 'package:result_type/result_type.dart';
 
-import '../../app.dart';
 import '../../models/index.dart';
 import 'themoviedb_api_configs.dart';
 
@@ -14,6 +14,7 @@ class ThemoviedbApi {
     final response = await _client.get(
       Uri.parse('$baseUrl/discover/movie?api_key=$themoviedbApiKey&page=1'),
     );
+
     if (response.statusCode == 200) {
       // Panic app if some important parameters are missed e.g.,
       // some field in a Header or in a Body.
