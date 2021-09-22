@@ -57,7 +57,7 @@ dependencies:
 
 ## Example
 
-To see examples of the following package on a device or simulator:
+To see [examples](https://github.com/minikin/panic/blob/3fee2a059013019bfe013f3ed687fc438b4960e4/example/lib/src/services/networking/themoviedb_api.dart#L21) of the following package on a device or simulator:
 
 ```sh
 cd example && flutter run
