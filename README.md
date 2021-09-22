@@ -41,7 +41,7 @@
 
 Panics a Flutter app.
 
-This allows a flutter app to terminate immediately and provide feedback to the caller of the app. panic should be used when a app reaches an unrecoverable state.
+This allows a flutter app to terminate immediately and provide feedback to the caller of the app. Panic should be used when a app reaches an unrecoverable state.
 
 ## Requirements
 
