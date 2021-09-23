@@ -17,7 +17,7 @@ class Panic {
   }
 
   void app([String? message]) {
-    final msg = message == null ? 'This is a terrible mistake!' : message;
+    final msg = message ?? 'This is a terrible mistake!';
     if (_appKey.currentContext != null && !kReleaseMode) {
       _pushPanicScreen(msg);
     } else {

@@ -8,17 +8,11 @@ import 'services/networking/themoviedb_api.dart';
 
 final routeObserver = RouteObserver<ModalRoute<void>>();
 final appKey = GlobalKey<NavigatorState>();
-
 final panic = Panic(appKey);
 
-class App extends StatefulWidget {
-  App({Key? key}) : super(key: key);
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
-  @override
-  _AppState createState() => _AppState();
-}
-
-class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
