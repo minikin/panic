@@ -30,7 +30,7 @@ class DiscoverScreen extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.white,
-        brightness: Brightness.light,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
         elevation: 1,
       ),
       body: SafeArea(

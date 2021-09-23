@@ -41,13 +41,13 @@
 
 Panics a Flutter app.
 
-This allows a flutter app to terminate immediately and provide feedback to the caller of the app. 
+This allows a flutter app to terminate immediately and provide feedback to the caller of the app.
 Panic should be used when an app reaches an unrecoverable state.
 
 ## Requirements
 
-- Dart: 2.13.3+
-- Flutter : 2.2.2+
+- Dart: 2.14.0+
+- Flutter : 2.5.0+
 
 ## Install
 
@@ -58,7 +58,56 @@ dependencies:
 
 ## Example
 
-To see [examples](https://github.com/minikin/panic/blob/3fee2a059013019bfe013f3ed687fc438b4960e4/example/lib/src/services/networking/themoviedb_api.dart#L21) of the following package on a device or simulator:
+1. Add `GlobalKey<NavigatorState>()` to `MaterialApp` widget.
+
+```dart
+// `appKey` should be globally accessible in an app.
+final appKey = GlobalKey<NavigatorState>();
+
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      navigatorKey: appKey,
+      home: Home(),
+    );
+  }
+}
+
+```
+
+2. Initialized `Panic`.
+
+```dart
+import 'package:panic/panic.dart';
+// `panic` should be globally accessible in an app
+final panic = Panic(appKey);
+```
+
+3. Panic a flutter app when you really need it.
+
+```dart
+  static Future<Result<DiscoverResponse?, NetworkError>> fetchDiscover() async {
+    final response = await _client.get(
+      Uri.parse('$baseUrl/discover/movie?api_key=$themoviedbApiKey&page=1'),
+    );
+
+    if (response.statusCode == 200) {
+      // Panic app if some important parameters are missed e.g.,
+      // some field in a Header or in a Body.
+      if (!response.headers.containsKey('MY MISSING KEY')) {
+        panic.app();
+      }
+      return Success(DiscoverResponse.fromJson(response.body));
+    } else {
+      throw NetworkError(response.statusCode);
+    }
+  }
+```
+
+To see [examples](https://github.com/minikin/panic/tree/main/example) of the following package on a device or simulator:
 
 ```sh
 cd example && flutter run
