@@ -8,10 +8,16 @@
 
 <p align="center">
 
+  <p align="center">
   <a href="https://github.com/minikin/panic">
-    <img src="https://img.shields.io/badge/platforms-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20Android%20%7C%20Web-green.svg" alt="Supported platforms" />
+    <img src="https://img.shields.io/badge/platforms-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20Android%20%7C%20Web%20%7C%20Linux%20%7C%20Windows-green.svg" alt="Supported platforms" />
   </a>
-
+ <p align="center">
+   
+   <a href="https://github.com/minikin/panic/actions">
+    <img src="https://github.com/minikin/panic/actions/workflows/on_pull_request.yml/badge.svg" alt="Current Build Status." />
+  </a>
+   
    <a href="https://github.com/minikin/panic/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Panic is released under the MIT license." />
   </a>
