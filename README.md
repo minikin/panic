@@ -59,7 +59,7 @@ Panic should be used when an app reaches an unrecoverable state.
 
 ```yaml
 dependencies:
-  panic: ^0.1.0
+  panic: ^0.0.1
 ```
 
 ## Example
