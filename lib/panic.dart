@@ -21,7 +21,7 @@ class Panic {
     if (_appKey.currentContext != null && !kReleaseMode) {
       _pushPanicScreen(msg);
     } else {
-      exit(0);
+      exit(1);
     }
   }
 
