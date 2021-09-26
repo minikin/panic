@@ -5,6 +5,9 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+/// `Panic` allows a flutter app to terminate immediately and provide feedback
+/// to the caller of the app.
+/// `Panic` should be used when an app reaches an unrecoverable state.
 class Panic {
   static Panic? _instance;
   final GlobalKey<NavigatorState> _appKey;
@@ -16,6 +19,7 @@ class Panic {
     _instance = this;
   }
 
+  /// Terminate app immediately.
   void app([String? message]) {
     final msg = message ?? 'This is a terrible mistake!';
     if (_appKey.currentContext != null && !kReleaseMode) {
