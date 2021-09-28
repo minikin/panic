@@ -10,7 +10,7 @@
 
   <p align="center">
   <a href="https://github.com/minikin/panic">
-    <img src="https://img.shields.io/badge/platforms-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20Android%20%7C%20Web%20%7C%20Linux%20%7C%20Windows-green.svg" alt="Supported platforms" />
+    <img src="https://img.shields.io/badge/platforms-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20Android%20%7C%20Linux%20%7C%20Windows-green.svg" alt="Supported platforms" />
   </a>
  <p align="center">
    
