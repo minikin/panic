@@ -1,7 +1,5 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
 
-<h1 align="center">Panic</h1>
-
 <p align="center">
   <a href="https://github.com/minikin/panic/">
     <img src="https://github.com/minikin/panic/blob/main/github_assets/panic.png?raw=true" alt="Panic screenshots" />
